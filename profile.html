@@ -54,13 +54,26 @@
     </style>
 </head>
 <body>
-    <div class="profile-container">
-        <img class="profile-pic" src="https://randomuser.me/api/portraits/men/32.jpg" alt="User Photo">
-        <h2>John Doe</h2>
-        <div class="user-info">john.doe@email.com<br>San Francisco, CA</div>
-        <div class="profile-actions">
-            <button>Edit Profile</button>
-            <button>Logout</button>
+    <div class="profile-container" style="padding:0;overflow:hidden;">
+        <div style="background:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;height:110px;width:100%;"></div>
+        <div style="padding:0 32px 32px 32px;">
+            <img class="profile-pic" src="https://randomuser.me/api/portraits/men/32.jpg" alt="User Photo" style="margin-top:-55px;box-shadow:0 2px 12px rgba(44,62,80,0.10);">
+            <h2 style="margin-top:10px;">John Doe <span style="font-size:16px;color:#27ae60;">✔</span></h2>
+            <div class="user-info">
+                <div style="margin-bottom:6px;">john.doe@email.com</div>
+                <div style="margin-bottom:6px;">San Francisco, CA</div>
+                <div style="margin-bottom:6px;">Joined: January 2022</div>
+                <div style="margin-bottom:6px;">Member Level: <span style="color:#27ae60;font-weight:bold;">Gold</span></div>
+            </div>
+            <div style="margin-bottom:18px;">
+                <a href="#" title="Twitter" style="margin:0 6px;display:inline-block;"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" style="width:22px;height:22px;"></a>
+                <a href="#" title="LinkedIn" style="margin:0 6px;display:inline-block;"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width:22px;height:22px;"></a>
+                <a href="#" title="GitHub" style="margin:0 6px;display:inline-block;"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" style="width:22px;height:22px;"></a>
+            </div>
+            <div class="profile-actions">
+                <button>Edit Profile</button>
+                <button>Logout</button>
+            </div>
         </div>
     </div>
 </body>
