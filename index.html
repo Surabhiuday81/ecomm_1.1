@@ -88,6 +88,38 @@
     <header>
         <h1>Mini E-Commerce Store</h1>
         <h1>Find the products below</h1>
+        <button id="theme-toggle" style="position:absolute;top:20px;right:30px;background:#444;color:#fff;border:none;padding:8px 16px;border-radius:5px;cursor:pointer;font-size:15px;">Toggle Dark Theme</button>
+            body {
+                font-family: 'Segoe UI', Arial, sans-serif;
+                background: #f7f7f7;
+                margin: 0;
+                padding: 0;
+                transition: background 0.3s, color 0.3s;
+            }
+            body.dark {
+                background: #181818;
+                color: #e0e0e0;
+            }
+            .container.dark {
+                background: #232323;
+                color: #e0e0e0;
+                box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+            }
+            header.dark {
+                background: #111;
+                color: #fff;
+            }
+            .product.dark {
+                background: #222;
+                border-color: #333;
+            }
+            #cart.dark {
+                background: #222;
+            }
+            #theme-toggle.dark {
+                background: #e0e0e0;
+                color: #222;
+            }
     </header>
     <div class="container">
         <h2>Products</h2>
@@ -101,6 +133,17 @@
         </div>
     </div>
     <script>
+        // Dark theme toggle logic
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            document.querySelector('header').classList.toggle('dark');
+            document.querySelectorAll('.container').forEach(el => el.classList.toggle('dark'));
+            document.querySelectorAll('.product').forEach(el => el.classList.toggle('dark'));
+            document.getElementById('cart').classList.toggle('dark');
+            themeToggle.classList.toggle('dark');
+        });
+
         const products = [
             { id: 1, name: 'Wireless Headphones', price: 59.99, img: 'https://cdn-icons-png.flaticon.com/512/1048/1048927.png' },
             { id: 2, name: 'Smart Watch', price: 99.99, img: 'https://cdn-icons-png.flaticon.com/512/2921/2921822.png' },
