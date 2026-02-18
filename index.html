@@ -89,6 +89,20 @@
         <h1>Mini E-Commerce Store</h1>
         <h1>Find the products below</h1>
     </header>
+    <!-- Login Form -->
+    <div class="container" id="login-container" style="max-width:400px; margin-bottom:30px;">
+        <h2>Login</h2>
+        <form id="login-form">
+            <div style="margin-bottom:15px;">
+                <input type="text" id="username" placeholder="Username" style="width:100%;padding:10px;border-radius:5px;border:1px solid #ccc;">
+            </div>
+            <div style="margin-bottom:15px;">
+                <input type="password" id="password" placeholder="Password" style="width:100%;padding:10px;border-radius:5px;border:1px solid #ccc;">
+            </div>
+            <button type="submit" style="width:100%;background:#222;color:#fff;padding:10px;border:none;border-radius:5px;font-size:16px;">Login</button>
+        </form>
+        <div id="login-message" style="margin-top:10px;color:#e74c3c;"></div>
+    </div>
     <div class="container">
         <h2>Products</h2>
         <div class="products" id="product-list">
@@ -101,6 +115,24 @@
         </div>
     </div>
     <script>
+        // Login form logic
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const msg = document.getElementById('login-message');
+            if(username === 'user' && password === 'pass') {
+                msg.style.color = '#27ae60';
+                msg.textContent = 'Login successful!';
+                setTimeout(() => {
+                    document.getElementById('login-container').style.display = 'none';
+                }, 1000);
+            } else {
+                msg.style.color = '#e74c3c';
+                msg.textContent = 'Invalid username or password.';
+            }
+        });
+
         const products = [
             { id: 1, name: 'Wireless Headphones', price: 59.99, img: 'https://cdn-icons-png.flaticon.com/512/1048/1048927.png' },
             { id: 2, name: 'Smart Watch', price: 99.99, img: 'https://cdn-icons-png.flaticon.com/512/2921/2921822.png' },
