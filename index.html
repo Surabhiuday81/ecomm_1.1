@@ -86,22 +86,23 @@
 </head>
 <body>
     <header style="position:relative;">
-        <nav style="background:#181818;padding:0.5rem 0 0.5rem 0;display:flex;align-items:center;justify-content:center;gap:40px;">
-            <a href="#" style="color:#fff;text-decoration:none;font-size:18px;font-weight:bold;">Home</a>
-            <a href="#products" style="color:#fff;text-decoration:none;font-size:18px;">Products</a>
-            <a href="#cart" style="color:#fff;text-decoration:none;font-size:18px;">Cart</a>
-            <a href="#about" style="color:#fff;text-decoration:none;font-size:18px;">About</a>
-        </nav>
-        <div style="display:flex;align-items:center;justify-content:center;position:relative;min-height:90px;">
-            <div style="flex:1;text-align:center;">
-                <h1 style="margin-bottom:0;">Mini E-Commerce Store</h1>
-                <p style="margin-top:8px;">Find the products below</p>
+        <nav style="background:#181818;padding:0.5rem 2vw;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+            <div style="display:flex;align-items:center;gap:30px;">
+                <span style="color:#fff;font-size:22px;font-weight:bold;letter-spacing:1px;">Mini E-Commerce</span>
+                <a href="#" style="color:#fff;text-decoration:none;font-size:17px;">Home</a>
+                <a href="#products" style="color:#fff;text-decoration:none;font-size:17px;">Products</a>
+                <a href="#cart" style="color:#fff;text-decoration:none;font-size:17px;">Cart</a>
+                <a href="#about" style="color:#fff;text-decoration:none;font-size:17px;">About</a>
             </div>
-            <form id="search-form" style="position:absolute;right:160px;top:30px;">
-                <input type="text" id="search-input" placeholder="Search products..." style="padding:8px 14px;border-radius:5px;border:1px solid #ccc;font-size:15px;width:180px;">
-                <button type="submit" style="background:#27ae60;color:#fff;border:none;padding:8px 14px;border-radius:5px;font-size:15px;cursor:pointer;">Search</button>
+            <form id="search-form" style="display:flex;align-items:center;gap:8px;">
+                <input type="text" id="search-input" placeholder="Search products..." style="padding:7px 12px;border-radius:5px;border:1px solid #ccc;font-size:15px;width:160px;">
+                <button type="submit" style="background:#27ae60;color:#fff;border:none;padding:7px 14px;border-radius:5px;font-size:15px;cursor:pointer;">Search</button>
             </form>
-            <button id="theme-toggle" style="position:absolute;top:20px;right:30px;background:#444;color:#fff;border:none;padding:8px 16px;border-radius:5px;cursor:pointer;font-size:15px;">Toggle Dark Theme</button>
+            <button id="theme-toggle" style="background:#444;color:#fff;border:none;padding:7px 14px;border-radius:5px;cursor:pointer;font-size:15px;">🌙</button>
+        </nav>
+        <div style="text-align:center;margin:30px 0 0 0;">
+            <h1 style="margin-bottom:0;">Mini E-Commerce Store</h1>
+            <p style="margin-top:8px;">Find the products below</p>
         </div>
     </header>
     <div class="container">
